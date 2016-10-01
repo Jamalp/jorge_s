@@ -35,6 +35,10 @@ h1,a,li {
 	-webkit-font-smoothing: antialiased !important;
 }
 
+h1,h2,p {
+	margin:0;
+}
+
 a {
 	text-decoration:none;
 	color:inherit;
