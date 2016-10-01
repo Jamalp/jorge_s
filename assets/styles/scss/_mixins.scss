@@ -1,0 +1,37 @@
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
+}
+
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
+}
+
+@mixin line-height($size) {
+	line-height: $size;
+	line-height:calculateRem($size);
+}
+
+@mixin kerning($kerning){
+	$letter-spacing: $kerning / 1000;
+	letter-spacing: $letter-spacing + em;
+}
+
+@mixin font($font-size, $line-height, $kerning) {
+  @include font-size($font-size);
+  @include line-height($line-height);
+  @include kerning($kerning);
+}
+$break-large:1024px;
+$break-med: 768px;
+$break-small:767px;
+
+@mixin mobile {
+    @media (max-width: 600px) { @content; }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: $break-med) and (max-width : $break-large) { @content;}
+}
+

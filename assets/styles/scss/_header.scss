@@ -1,0 +1,43 @@
+.header {
+	display:flex;
+	height:100px;
+	align-items:center;
+	justify-content:space-between;
+	padding:0 5%; 
+	.logo {
+		font-family: 'Oswald', sans-serif;
+		@include font-size(22px);
+		text-transform: uppercase;
+		display:block;
+		color:$black;
+		width:20%;
+	}
+	.navigation {
+		width:60%;
+		justify-content:center;
+	}
+	.social {
+		width:20%;
+		justify-content:flex-end;
+	}
+	ul {
+		display:flex;
+	}
+	.navigation {
+		li:not(:last-child) {
+			margin-right:10px;
+		}
+		li {
+			@include font-size(14px);
+			font-weight: 100;
+			cursor: pointer;
+
+			&.active {
+				font-weight: 700;
+				a {
+					font-weight: inherit;
+				}
+			}
+		}
+	}
+}

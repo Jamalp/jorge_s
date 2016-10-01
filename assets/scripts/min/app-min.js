@@ -1,0 +1,1 @@
+var app=app||{};!function($){app.main={growLine:function(){$(window).load(function(){$(".grow-underline").addClass("grow")})},init:function(){console.log("init")}},jQuery(document).ready(function(){app.main.init()})}(jQuery);
