@@ -7,7 +7,7 @@
 
 	@include mobile {
 		position:fixed;
-		top:50px;
+		top:60px;
 		left:0;
 		right:0;
 		bottom:0;
@@ -99,7 +99,9 @@
 	justify-content:center;
 	align-items:center;
 	@include mobile {
-		display:flex;
+		display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
 	}
 	.hamburger {
 		position:absolute;
