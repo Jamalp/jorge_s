@@ -32,11 +32,18 @@
 	.contact-info {
 		a:not(:last-child) {
 			margin-right:20px;
+			@include mobile {
+				margin-right:0;
+			}
 		}
 
 		a {
 			opacity: 0;
 		    transition:all 1.5s ease;
+		    @include mobile {
+		    	display:block;
+		    	margin-bottom:20px;
+		    }
 			span {
 				margin-right:10px;
 			}

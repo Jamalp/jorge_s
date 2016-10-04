@@ -24,11 +24,11 @@ var app = app || {};
 		},	
 
 		clickEvents : function () {
-			$('#video-close').off().on('click', function() {
+			$('#video-close').on('click', function() {
 				app.main.destroyVideoModule();
 			});
 
-			$('#contactClose').off().on('click', function() {
+			$('#contactClose').on('click', function() {
 				app.main.contactClose();
 			});
 
@@ -94,6 +94,12 @@ var app = app || {};
 		contactClose : function () {
 			$('.contact').removeClass('show');
 		},
+		mobileMenuEvent : function () {
+			$('.hamburger').on('click', function() {
+				$(this).toggleClass('is-active');
+				$('.header').toggleClass('show');
+			});
+		},
 
 		init : function() {
 			app.main.growLine();
@@ -101,6 +107,8 @@ var app = app || {};
 			app.main.theaterMode();
 			app.main.initVideoModule();
 			app.main.contact();
+			app.main.clickEvents();
+			app.main.mobileMenuEvent();
 		}
 	};
 

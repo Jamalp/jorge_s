@@ -28,7 +28,7 @@
 			padding:100px 90px 0; 
 		}
 		@include mobile {
-			padding:60px 20px 0;
+			padding:80px 20px 0;
 		}
 
 		.bulb {
@@ -46,9 +46,11 @@
 		    &:hover {
 		    	color:#5E6777;
 		    }
-		}
 
-		
+		    @include mobile {
+		    	display:none;
+		    }
+		}
 	}
 
 	.video-player {
@@ -63,11 +65,14 @@
 		    &.lights-off {
 		    	color:white;
 		    }
-
 		    &:hover {
 		    	transform: rotate(90deg);
 		    }
 
+			@include mobile {
+				right:0;
+				font-size:22px;
+			}
 		}
 	}
 }
