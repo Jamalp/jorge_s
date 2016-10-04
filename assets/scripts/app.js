@@ -52,13 +52,15 @@ var app = app || {};
 		},
 
 		destroyVideoModule : function() {
-			$('.video-wrapper').removeClass('show');
+			$('.video-wrapper, .video-container').removeClass('show');
 			$('#video-player').remove();
 			$('.lights-off').removeClass('lights-off');
+
 		},
 
 		vimeo : function (id) {
 			$('.video-wrapper').addClass('show');
+			$('.loader').addClass('show');
 		    var options = {
 		        id: id,
 		        width: 640,
@@ -70,6 +72,7 @@ var app = app || {};
 
 		    player.ready().then(function() {
 		    	app.main.fitVid();
+		    	$('.loader').removeClass('show');
 		    	$('.video-container').addClass('show');
 		    });
 

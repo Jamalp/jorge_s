@@ -1,0 +1,56 @@
+.works-grid {
+	display:flex;
+	flex-wrap:wrap;
+	margin: 0 -4px;
+	padding:0 5%;
+	animation:fadeInFromNone 2.5s ease;
+	.thumbnail {
+		width:calc(33.33% - 4px);
+		margin:0 2px 4px;
+		cursor:pointer;
+		overflow:hidden;
+		@include mobile {
+			width:100%;
+			margin: 0 0 6px;
+		}
+
+		&.featured {
+			width:calc(66.66% - 4px);
+			@include mobile {
+				width:100% !important;
+			}
+		}
+	}
+
+	.stacked-work {
+		display:flex;
+		flex-direction:column;
+		width:calc(33.33% - 4px);
+		margin:0 2px 4px;
+		@include mobile {
+			width:100%;
+			margin: 0;
+		}
+
+		.thumbnail {
+			width:100%;
+			height:calc(50% - 3px);
+			@include mobile {
+				height:100%;
+			}
+			&:first-child {
+				margin:0 0 2px;
+				@include mobile {
+					margin: 0 0 6px;
+				}
+			}
+			&:last-child {
+				margin: 2px 0 0;
+				@include mobile {
+					margin: 0 0 6px;
+				}
+			}
+		}
+	}
+
+}
