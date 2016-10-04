@@ -1,24 +1,28 @@
 #about {
 	.wrapper {
-	
-		@include mobile {
-			width:100%;
-			padding:0 20px;
-		}
-
 		@include tablet {
 			width:80%;
 		}
+	
+		@include mobile {
+			width:100%;
+		}
+
 
 		header {
 			width:90%;
 			margin:0 auto 40px;
+			@include mobile {
+				width:100%;
+				padding:0 20px;
+			}
 			div {
 				width:80px;
 				border-top:1px solid $black;
 				margin-top:10px;
 			}
 		}
+
 	}
 
 	.about-hero {
@@ -45,6 +49,8 @@
 		@include mobile {
 			display: block;
 			margin:0;
+			width:100%;
+			padding:0 20px;
 		}
 		p {
 			width:50%;
