@@ -1,13 +1,6 @@
 #about {
 	.wrapper {
-		@include tablet {
-			width:80%;
-		}
-	
-		@include mobile {
-			width:100%;
-		}
-
+		width:100%;
 
 		header {
 			width:90%;
@@ -54,7 +47,7 @@
 		}
 		p {
 			width:50%;
-			padding-right:20px;
+			padding-right:30px;
 			@include line-height(21px);
 			margin-bottom:20px;
 			@include mobile {
