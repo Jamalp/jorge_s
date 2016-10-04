@@ -8,7 +8,7 @@
 		font-family: 'Oswald', sans-serif;
 		@include font-size(22px);
 		text-transform: uppercase;
-		display:block;
+		display:inline-block;
 		color:$black;
 	}
 	.logo-container {

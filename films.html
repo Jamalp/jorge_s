@@ -29,12 +29,14 @@
 </head>
 <body>
 	<nav class="header">
-	<a href="/" class="logo strike"><span>Jorge X Sandoval</span></a>
+	<div class="logo-container">
+		<a href="/" class="logo strike"><span>Jorge X Sandoval</span></a>
+	</div>
 	<ul class="navigation">
-		<li><a href="#0">ME</a></li>
-		<li><a href="#0">WORKS</a></li>
-		<li class="active"><a href="#0">FILMS</a></li>
-		<li id="initContact">CONTACT</li>
+		<li><a href="#0" class="underline">ME</a></li>
+		<li><a href="#0" class="underline">WORKS</a></li>
+		<li class="active underline"><a href="#0">FILMS</a></li>
+		<li id="initContact" class="underline">CONTACT</li>
 	</ul>
 	<ul class="social">
 		<li><a href="https://www.linkedin.com/in/jxsandoval" target="_blank">L</a></li>
@@ -48,29 +50,45 @@
 			<span class="grow-underline"></span>
 		</header>
 		<div class="films-row">
-			<div class="film js-film">
+			<div class="film js-video" data-vimeoID="59777392">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=FILM&w=350&h=600" alt="">
 			</div>
-			<div class="film js-film">
+			<div class="film js-video" data-vimeoID="184840918">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=FILM&w=350&h=600" alt="">
 			</div>
-			<div class="film js-film">
+			<div class="film js-video" data-vimeoID="184840918">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=FILM&w=350&h=600" alt="">
 			</div>
-			<div class="film js-film">
+			<div class="film js-video" data-vimeoID="184840918">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=FILM&w=350&h=600" alt="">
 			</div>
-			<div class="film js-film">
+			<div class="film js-video" data-vimeoID="184840918">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=FILM&w=350&h=600" alt="">
 			</div>
-			<div class="film js-film">
+			<div class="film js-video" data-vimeoID="184840918">
 				<img src="https://placeholdit.imgix.net/~text?txtsize=33&txt=FILM&w=350&h=600" alt="">
 			</div>
 		</div>
-		<div class="top">BACK TO TOP</div>
+		<div class="top"><span class="icon-up"></span></div>
 	</section>
+	<div class="video-wrapper theater">
+		<div class="video-container">
+			<i id="bulb" class="icon-bulb bulb theater" aria-hidden="true"></i>
+		</div>
+	</div>
+	<div class="contact">
+		<div id="contactClose" class="icon-close"></div>
+		<div class="contact-info">
+			<a class="underline" href="mailto:jorgexsandoval@gmail.com"><span class="icon-email"></span>jorgexsandoval@gmail.com</a>
+			<a class="underline" href="tel:15626593088"><span class="icon-phone"></span>562-659-3088</a>
+		</div>
+	</div>
 	<script src="assets/scripts/jquery.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/scripts/isVisible.js" type="text/javascript" charset="utf-8"></script>
+	<script src="https://player.vimeo.com/api/player.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/scripts/fitvid.js" type="text/javascript" charset="utf-8"></script>
 	<script src="assets/scripts/app.js" type="text/javascript" charset="utf-8"></script>
+
+
+
 </body>
 </html>

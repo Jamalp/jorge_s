@@ -9,7 +9,7 @@
 			width:0;
 			display:block;
 			margin:20px auto;
-			transition:width 0.5s ease;
+			transition:width 1s ease;
 
 			&.grow {
 				width:100px;
@@ -23,6 +23,7 @@
 	flex-wrap:wrap;
 	margin: 0 -4px;
 	padding:0 5%;
+	animation:fadeInFromNone 2.5s ease;
 	@include mobile {
 		display:block;
 	}
@@ -53,7 +54,6 @@
 	height:50px;
 	text-align:center;
 	justify-content:center;
-	transition:background-color 0.3s ease, color 0.3s ease;
 	color:$black;
 	display:flex;
 	align-items:center;
@@ -63,9 +63,13 @@
 		margin: 0;
 		height:25px;
 	}
+	span {
+		transition:transform 1s ease;
+	}
 	&:hover {
-		background-color:$black;
-		color:white;
+		span {
+			transform: translateY(-10px);
+		}
 	}
 	
 }
