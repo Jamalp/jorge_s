@@ -76,13 +76,12 @@
 			@include mobile {
 				margin-bottom:18px;
 				@include font-size(25px);
+				display: table;
 			}
 
 			&.active {
 				font-weight: 700;
-				@include mobile {
-					display:table;
-				}
+				
 				a {
 					font-weight: inherit;
 				}

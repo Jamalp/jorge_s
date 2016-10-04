@@ -11,6 +11,11 @@
 	display:none;
 	align-items:center;
 	justify-content:center;
+	z-index: 100;
+	@include mobile {
+		justify-content:flex-start;
+		padding-left:20px;
+	}
 	&.show {
 		animation:fadeInFromNone 1s ease;	
 		display:flex;
