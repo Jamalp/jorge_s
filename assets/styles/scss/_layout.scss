@@ -1,5 +1,12 @@
-// $black: #343541;
 $black: #31353D;
+@font-face {
+    font-family: trade;
+    src: url(../../fonts/TradeGothicLTStd.otf);
+}
+@font-face {
+    font-family: tradeBold;
+    src: url(../../fonts/TradeGothicLTStd-Bold.otf);
+}
 
 html {
 	box-sizing: border-box;
@@ -9,8 +16,9 @@ html {
 
 html,body {
 	height: 100%;
-	font-family: 'Lato', sans-serif;
+	font-family: trade, sans-serif;
 	margin:0;
+
 }
 
 
@@ -23,15 +31,15 @@ body {
 	vertical-align: baseline;
 	outline:0;
 	width:100%;
-	max-width:1400px;
 	color:$black;
+	background-color:#f6f6f4;
 	@include mobile {
 		padding-top:60px;
 	}
 }
 
 h1 {
-	font-family: 'Oswald', sans-serif;
+	font-family: trade, sans-serif;
 }
 
 h1,a,li {
@@ -64,3 +72,7 @@ img {
 	vertical-align:text-bottom;
 }
 
+.max-w {
+	// max-width:1440px;
+	// margin:0 auto;
+}

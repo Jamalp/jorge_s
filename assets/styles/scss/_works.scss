@@ -1,3 +1,6 @@
+#work {
+	padding-top:40px;
+}
 .work-header {
 	padding:0 5%;
 	width:100%;
@@ -34,9 +37,15 @@
 		cursor:pointer;
 		overflow:hidden;
 		transition: all 1s ease;
+		position:relative;
 		@include mobile {
 			width:100%;
 			margin: 0 0 6px;
+		}
+		&:hover {
+			.title {
+				opacity:1;
+			}
 		}
 		&.featured {
 			width:calc(66.66% - 4px);
@@ -54,6 +63,39 @@
 		}
 		&.show-up {
 			animation:fadeInFromNoneUp .5s ease;
+		}
+
+		.title {
+			position:absolute;
+			background-color:rgba(0,0,0,0.7);
+			color:white;
+			top:0;
+			left:0;
+			right:0;
+			bottom:0;
+			display:flex;
+			align-items:center;
+			justify-content:center;
+			flex-direction:column;
+			width:100%;
+			height:100%;
+			padding:0 20px;
+			opacity:0;
+			transition:opacity 0.4s ease;
+			h4,h6 {
+				color:inherit;
+				text-align:center;
+				margin:0;
+				text-transform: uppercase;
+			}
+
+			h4 {
+				font-size:3vw
+			}
+
+			h6 {
+				font-size:.75vw;
+			}
 		}
 	}
 
