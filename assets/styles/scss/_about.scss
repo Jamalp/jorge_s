@@ -1,7 +1,7 @@
 #about {
 	.wrapper {
-		width:100%;
-
+		width:75%;
+		margin:0 auto;
 		header {
 			width:90%;
 			margin:0 auto 40px;
@@ -20,25 +20,13 @@
 
 	.about-hero {
 		margin-bottom:40px;
-		height:500px;
-		background:url('../../img/about/about.jpg') center center no-repeat;
-		background-size:cover;
-		img {
-			transition:filter 2s ease;
-		}
-		&:hover {
-			img {
-				-webkit-filter: grayscale(100%); /* Chrome, Safari, Opera */
-			    filter: grayscale(100%);
-			}
-		}
 	}
 
 	.about-copy {
 		display:flex;
 		flex-wrap:wrap;
-		width:80%;
-		margin:0 auto;
+		width:100%;
+		margin:0 auto 40px;
 		@include mobile {
 			display: block;
 			margin:0;
