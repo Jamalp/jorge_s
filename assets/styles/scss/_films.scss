@@ -23,15 +23,15 @@
 .films-row {
 	display:flex;
 	flex-wrap:wrap;
-	margin: 0 -4px;
+	margin: 0 -8px;
 	padding:0 5%;
 	animation:fadeInFromNone 2.5s ease;
 	@include mobile {
 		display:block;
 	}
 	.film {
-		width:calc(33.33% - 4px);
-		margin:0 2px 4px;
+		width:calc(33.33% - 8px);
+		margin:0 4px 8px;
 		cursor:pointer;
 		overflow:hidden;
 		@include mobile {
