@@ -1,4 +1,5 @@
-$black: #343541;
+// $black: #343541;
+$black: #31353D;
 
 html {
 	box-sizing: border-box;
@@ -23,6 +24,7 @@ body {
 	outline:0;
 	width:100%;
 	max-width:1400px;
+	color:$black;
 	@include mobile {
 		padding-top:60px;
 	}

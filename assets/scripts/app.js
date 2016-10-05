@@ -103,6 +103,32 @@ var app = app || {};
 				$('.header').toggleClass('show');
 			});
 		},
+		sortWorkPage : function () {
+			var commercialBtn = $('#initWorkCommercial'),
+				musicBtn = $('#initWorkMusic'),
+				commercials = $('.commercial'),
+				music = $('.music');
+
+			commercialBtn.on('click', function() {
+				$(this).addClass('active');
+				musicBtn.removeClass('active');
+				commercials.removeClass('hide');
+				music.addClass('hide');
+				$('.featured').removeClass('featured');
+			});
+
+			musicBtn.on('click', function() {
+				$(this).addClass('active');
+				commercialBtn.removeClass('active');
+				music.removeClass('hide');
+				commercials.addClass('hide');
+				$('.featured').removeClass('featured');
+			});
+		},
+
+		showMusic : function () {
+			$('.works-grid').addClass('hide')
+		},
 
 		init : function() {
 			app.main.growLine();
@@ -111,6 +137,7 @@ var app = app || {};
 			app.main.initVideoModule();
 			app.main.contact();
 			app.main.clickEvents();
+			app.main.sortWorkPage();
 			app.main.mobileMenuEvent();
 		}
 	};

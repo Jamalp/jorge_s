@@ -1,3 +1,27 @@
+.work-header {
+	padding:0 5%;
+	width:100%;
+	margin-bottom:50px;
+	ul {
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		li {
+			cursor:pointer;
+			&.active {
+				font-weight: 700;
+				
+			}
+			&:first-child  {
+				margin-right:10px;
+			}
+			&:last-child  {
+				margin-left:10px;
+			}
+			
+		}
+	}
+}
 .works-grid {
 	display:flex;
 	flex-wrap:wrap;
@@ -13,12 +37,18 @@
 			width:100%;
 			margin: 0 0 6px;
 		}
-
 		&.featured {
 			width:calc(66.66% - 4px);
+			img {
+				height:100%;
+			}
 			@include mobile {
 				width:100% !important;
 			}
+		}
+		&.hide {
+			animation:fadeOutUp 1.5s ease;
+			display:none;
 		}
 	}
 
@@ -35,6 +65,7 @@
 		.thumbnail {
 			width:100%;
 			height:calc(50% - 3px);
+			flex-grow:1;
 			@include mobile {
 				height:100%;
 			}
