@@ -33,6 +33,7 @@
 		margin:0 2px 4px;
 		cursor:pointer;
 		overflow:hidden;
+		transition: all 1s ease;
 		@include mobile {
 			width:100%;
 			margin: 0 0 6px;
@@ -47,8 +48,12 @@
 			}
 		}
 		&.hide {
-			animation:fadeOutUp 1.5s ease;
+			opacity:0;
+			transform: translateY(5%);
 			display:none;
+		}
+		&.show-up {
+			animation:fadeInFromNoneUp .5s ease;
 		}
 	}
 
@@ -60,6 +65,12 @@
 		@include mobile {
 			width:100%;
 			margin: 0;
+		}
+
+		&.sorted {
+			.thumbnail {
+				margin: 0 !important;
+			}
 		}
 
 		.thumbnail {

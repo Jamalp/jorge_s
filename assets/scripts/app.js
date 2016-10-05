@@ -105,29 +105,47 @@ var app = app || {};
 		},
 		sortWorkPage : function () {
 			var commercialBtn = $('#initWorkCommercial'),
-				musicBtn = $('#initWorkMusic'),
-				commercials = $('.commercial'),
-				music = $('.music');
+				musicBtn = $('#initWorkMusic');
 
 			commercialBtn.on('click', function() {
 				$(this).addClass('active');
 				musicBtn.removeClass('active');
-				commercials.removeClass('hide');
-				music.addClass('hide');
+				app.main.showCommercial();
 				$('.featured').removeClass('featured');
+				$('.stacked-work').addClass('sorted');
 			});
 
 			musicBtn.on('click', function() {
 				$(this).addClass('active');
 				commercialBtn.removeClass('active');
-				music.removeClass('hide');
-				commercials.addClass('hide');
+				app.main.showMusic();
 				$('.featured').removeClass('featured');
+				$('.stacked-work').addClass('sorted');
 			});
 		},
 
 		showMusic : function () {
-			$('.works-grid').addClass('hide')
+			$('.thumbnail').addClass('hide');
+			var time = 0;
+			$('.music').each(function () {
+				var $this = $(this);
+				setTimeout(function() {
+					$this.removeClass('hide').addClass('show-up');
+				},time);
+				time +=100;
+			});
+		},
+
+		showCommercial : function () {
+			$('.thumbnail').addClass('hide');
+			var time = 0;
+			$('.commercial').each(function() {
+				var $this = $(this);
+				setTimeout(function() {
+					$this.removeClass('hide').addClass('show-up');
+				},time);
+				time += 100;
+			});
 		},
 
 		init : function() {
