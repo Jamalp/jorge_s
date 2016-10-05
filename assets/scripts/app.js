@@ -60,7 +60,6 @@ var app = app || {};
 
 		vimeo : function (id) {
 			$('.video-wrapper').addClass('show');
-			$('.loader').addClass('show');
 		    var options = {
 		        id: id,
 		        width: 640,
@@ -72,7 +71,6 @@ var app = app || {};
 
 		    player.ready().then(function() {
 		    	app.main.fitVid();
-		    	$('.loader').removeClass('show');
 		    	$('.video-container').addClass('show');
 		    });
 

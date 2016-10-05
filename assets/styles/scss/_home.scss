@@ -1,7 +1,9 @@
 .home {
+	padding:0 5%;
 	@include mobile {
 		display:flex;
 		align-items:center;
 		height:calc(100vh - 60px);
+		padding:0;
 	}
 }
