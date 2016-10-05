@@ -125,7 +125,7 @@ var app = app || {};
 		},
 
 		showMusic : function () {
-			$('.thumbnail').addClass('hide');
+			$('.thumbnail').addClass('hide').removeClass('show-up');
 			var time = 0;
 			$('.music').each(function () {
 				var $this = $(this);
@@ -137,7 +137,7 @@ var app = app || {};
 		},
 
 		showCommercial : function () {
-			$('.thumbnail').addClass('hide');
+			$('.thumbnail').addClass('hide').removeClass('show-up');
 			var time = 0;
 			$('.commercial').each(function() {
 				var $this = $(this);
