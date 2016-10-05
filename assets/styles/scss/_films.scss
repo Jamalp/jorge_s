@@ -3,12 +3,14 @@
 		text-align:center;
 		h1 {
 			margin:0;
+			@include font-size(16px);
+			font-weight:100;
 		}
 		span {
 			border-top:1px solid $black;
 			width:0;
 			display:block;
-			margin:20px auto;
+			margin:10px auto 25px;
 			transition:width 1s ease;
 
 			&.grow {
