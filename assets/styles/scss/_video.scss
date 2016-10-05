@@ -21,6 +21,8 @@
 		padding:100px 180px 0; 
 		opacity: 0;
 	    transition:opacity 1s ease;
+        max-width: 1400px;
+	    margin: 0 auto;
 		&.show {
 			opacity:1;
 		}
@@ -56,12 +58,13 @@
 	.video-player {
 		position:relative;
 		.close {
-			position:absolute;
-			right: -26px;
-		    top: -26px;
+			position:fixed;
+			left: 20px ;
+		    top: 20px;
 		    color:$black;
 		    cursor:pointer;
 		    transition:color 0.5s ease, transform .4s ease;
+		    font-size:22px;
 		    &.lights-off {
 		    	color:white;
 		    }
