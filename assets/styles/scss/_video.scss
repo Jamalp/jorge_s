@@ -18,7 +18,11 @@
 	}
 	.video-container {
 		position:relative;
-		padding:100px 180px 0; 
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		height:100%;
+		width:100%;
 		opacity: 0;
 	    transition:opacity 1s ease;
         max-width: 1800px;
@@ -57,6 +61,7 @@
 
 	.video-player {
 		position:relative;
+		width:85%;
 		.close {
 			position:fixed;
 			left: 20px ;
