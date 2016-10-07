@@ -23,6 +23,16 @@
 
 	.about-hero {
 		margin-bottom:40px;
+
+		img {
+			-webkit-filter: grayscale(1);
+			filter: grayscale(1);
+			transition:filter 0.8s ease;
+
+			&:hover {
+				filter: grayscale(0);
+			}
+		}
 	}
 
 	.about-copy {
