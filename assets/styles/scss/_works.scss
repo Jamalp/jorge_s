@@ -82,7 +82,9 @@
 		&.show-up {
 			animation:fadeInFromNoneUp .5s ease;
 		}
-
+		img {
+			height:100%;
+		}
 		.title {
 			position:absolute;
 			background-color:rgba(0,0,0,0.7);
