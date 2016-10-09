@@ -99,13 +99,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/work\/commercials\/ANA Airlines.png": {
+	"\/assets\/img\/work\/commercials\/ANA_Airlines.png": {
 		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"initialSize": 1.48571e+06,
-		"inputAbbreviatedPath": "\/assets\/img\/work\/commercials\/ANA Airlines.png",
-		"outputAbbreviatedPath": "\/assets\/img\/work\/commercials\/ANA Airlines.png",
+		"inputAbbreviatedPath": "\/assets\/img\/work\/commercials\/ANA_Airlines.png",
+		"outputAbbreviatedPath": "\/assets\/img\/work\/commercials\/ANA_Airlines.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
