@@ -1,5 +1,8 @@
 #work {
 	padding-top:40px;
+	@include mobile {
+		padding-top:50px;
+	}
 }
 .work-header {
 	padding:0 10%;
@@ -41,6 +44,9 @@
 		@include mobile {
 			width:100%;
 			margin: 0 0 6px;
+			&:last-child {
+				margin:0;
+			}
 		}
 		&:hover {
 			.title {
