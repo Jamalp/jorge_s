@@ -1,6 +1,6 @@
 {
 "CodeKitInfo": "This is a CodeKit 2.x project configuration file. It is designed to sync project settings across multiple machines. MODIFYING THE CONTENTS OF THIS FILE IS A POOR LIFE DECISION. If you do so, you will likely cause CodeKit to crash. This file is not useful unless accompanied by the project that created it in CodeKit 2. This file is not backwards-compatible with CodeKit 1.x. For more information, see: http:\/\/incident57.com\/codekit",
-"creatorBuild": "19137",
+"creatorBuild": "19115",
 "files": {
 	"\/about.html": {
 		"fileType": 8192,
@@ -22,68 +22,79 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/films\/dark-matters.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/films\/barbalzoralo.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 374134,
-		"inputAbbreviatedPath": "\/assets\/img\/films\/dark-matters.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/films\/dark-matters.jpg",
+		"initialSize": 637170,
+		"inputAbbreviatedPath": "\/assets\/img\/films\/barbalzoralo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/films\/barbalzoralo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/films\/dundalara.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/films\/darkmatters.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 156623,
-		"inputAbbreviatedPath": "\/assets\/img\/films\/dundalara.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/films\/dundalara.jpg",
+		"initialSize": 338954,
+		"inputAbbreviatedPath": "\/assets\/img\/films\/darkmatters.png",
+		"outputAbbreviatedPath": "\/assets\/img\/films\/darkmatters.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/films\/floyd.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/films\/floydthebarber.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 450519,
-		"inputAbbreviatedPath": "\/assets\/img\/films\/floyd.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/films\/floyd.jpg",
+		"initialSize": 65153,
+		"inputAbbreviatedPath": "\/assets\/img\/films\/floydthebarber.png",
+		"outputAbbreviatedPath": "\/assets\/img\/films\/floydthebarber.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/films\/htdc.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/films\/htdc.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 1.4094e+06,
-		"inputAbbreviatedPath": "\/assets\/img\/films\/htdc.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/films\/htdc.jpg",
+		"initialSize": 454225,
+		"inputAbbreviatedPath": "\/assets\/img\/films\/htdc.png",
+		"outputAbbreviatedPath": "\/assets\/img\/films\/htdc.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/films\/incredible.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/films\/insearchofincredible.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 71952,
-		"inputAbbreviatedPath": "\/assets\/img\/films\/incredible.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/films\/incredible.jpg",
+		"initialSize": 192191,
+		"inputAbbreviatedPath": "\/assets\/img\/films\/insearchofincredible.png",
+		"outputAbbreviatedPath": "\/assets\/img\/films\/insearchofincredible.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/films\/ucla.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/films\/uclacentennial.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 484265,
-		"inputAbbreviatedPath": "\/assets\/img\/films\/ucla.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/films\/ucla.jpg",
+		"initialSize": 528702,
+		"inputAbbreviatedPath": "\/assets\/img\/films\/uclacentennial.png",
+		"outputAbbreviatedPath": "\/assets\/img\/films\/uclacentennial.png",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/assets\/img\/home\/mainpage_thumbprep.png": {
+		"fileType": 32768,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 963477,
+		"inputAbbreviatedPath": "\/assets\/img\/home\/mainpage_thumbprep.png",
+		"outputAbbreviatedPath": "\/assets\/img\/home\/mainpage_thumbprep.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
@@ -187,13 +198,13 @@
 		"outputPathIsSetByUser": 0,
 		"processed": 0
 		},
-	"\/assets\/img\/work\/music\/Echo.jpg": {
-		"fileType": 16384,
+	"\/assets\/img\/work\/music\/Echo.png": {
+		"fileType": 32768,
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
-		"initialSize": 260246,
-		"inputAbbreviatedPath": "\/assets\/img\/work\/music\/Echo.jpg",
-		"outputAbbreviatedPath": "\/assets\/img\/work\/music\/Echo.jpg",
+		"initialSize": 456269,
+		"inputAbbreviatedPath": "\/assets\/img\/work\/music\/Echo.png",
+		"outputAbbreviatedPath": "\/assets\/img\/work\/music\/Echo.png",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"processed": 0
