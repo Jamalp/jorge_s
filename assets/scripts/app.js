@@ -17,7 +17,7 @@ var app = app || {};
 		initVideoModule : function() {
 			$('.js-video').on('click', function() {
 				var vimeoID = $(this).attr('data-vimeoID');
-				if (vimeoID !== undefined) {
+				if (vimeoID !== undefined || vimeoID !== '') {
 					app.main.createVideoHtml(vimeoID);
 				}
 			});
