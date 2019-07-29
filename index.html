@@ -24,6 +24,7 @@
 	<meta name="description" content="Jorge Sandoval is a Los Angeles based film editor and motion graphics designer.">
 	<link rel="canonical" href="http://www.jorgexsandoval.com">
 	<link rel="shortcut icon" href="favicon">
+	<link rel="stylesheet" type="text/css" href="assets/styles/css/main.min.css" />
 	<link rel="stylesheet" type="text/css" href="assets/styles/css/style.css" />
 </head>
 <body>
@@ -55,8 +56,14 @@
 	<section class="home max-w" style="background:url('assets/img/home/mainpage_thumbprep.png') center center no-repeat;background-size:cover;">
 		<a href="/work">
 			<!-- Change the src for a different image. -->
-			<img src="assets/img/home/mainpage_thumbprep.png" alt="">
+			<!-- <img src="assets/img/home/mainpage_thumbprep.png" alt=""> -->
 			<!-- End Change -->
+			<video id="homeVideo" muted>
+					<!-- Change the src for a different video. -->
+				<source src="assets/mov/film.mp4" type="video/mp4">
+				<!-- <source src="myVideo.webm" type="video/webm"> -->
+					<!-- End Change -->
+			</video>
 		</a>
 	</section>
 	<div class="contact">
@@ -68,6 +75,6 @@
 	</div>
 	<script src="assets/scripts/jquery.js" type="text/javascript" charset="utf-8"></script>
 	<script src="assets/scripts/fitvid.js" type="text/javascript" charset="utf-8"></script>
-	<script src="assets/scripts/app.js" type="text/javascript" charset="utf-8"></script>
+	<script src="assets/scripts/src/app.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
