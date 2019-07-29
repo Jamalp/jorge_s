@@ -10,6 +10,8 @@
 		padding:0;
 	}
 	a {
+		display: block;
+
 		@include mobile {
 			opacity:0;
 			position:absolute;
@@ -20,5 +22,11 @@
 			width:100%;
 			height:100%;
 		}
+	}
+
+	video {
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 }
