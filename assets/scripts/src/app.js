@@ -147,7 +147,7 @@ var app = app || {};
 		},
 
 		isVideoLoaded() {
-			document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
+			document.getElementById('homeVideo').addEventListener('loadeddata', function() {
 				console.log('video loaded');
 				app.main.scrubVideo();
 			});
