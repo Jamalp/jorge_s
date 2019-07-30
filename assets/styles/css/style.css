@@ -9,4 +9,10 @@
   display: block;
   width: 100%;
   height: auto;
+  backface-visibility: hidden;
+  transform: translate3d(0,0,0);
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select:none;
+  ::selection: none; 
 }

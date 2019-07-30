@@ -146,21 +146,49 @@ var app = app || {};
 			});
 		},
 
-		scrubVideo : function() {
-			var mouseX;
-			$('#homeVideo').mousemove( function(e) {
-						mouseX = e.pageX; 
-						var timV = $("#homeVideo").get(0).duration;
-						var valV = (timV*mouseX/$("#homeVideo").width());
-						console.log(valV);
-						$("#homeVideo").get(0).currentTime = valV - 22;
+		isVideoLoaded() {
+			document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
+				console.log('video loaded');
+				app.main.scrubVideo();
 			});
 		},
+
+		scrubVideo : function() {
+			var x = 0;
+			var video = document.getElementById('homeVideo');
+			var duration = video.duration;
+			var width = video.offsetWidth;
+			var rect = video.getBoundingClientRect();
+			video.addEventListener('mousemove', function(e) {
+					e.preventDefault();
+					x = e.clientX - rect.left;
+					window.requestAnimationFrame(video_scrub);  
+			});
+
+			function video_scrub() {
+				var t = duration * x / width;
+				var value = Math.round(t * 100) / 100;
+				video.currentTime = value;
+			}
+		},
+
+		// scrubVideo : function() {
+		// 	var mouseX;
+		// 	$('#homeVideo').mousemove( function moveFunc(e) {
+		// 			mouseX = e.pageX;
+		// 			var timV = $("#homeVideo").get(0).duration;
+		// 			var valV = (timV * mouseX/ $('#homeVideo').width());
+		// 			// reducing the precision of calculation
+		// 			valV = Math.round(valV * 100) / 100;
+		// 			console.log(valV);
+		// 			$("#homeVideo").get(0).currentTime = valV - 7;
+		// 	});
+		// },
 
 		init : function() {
 			app.main.growLine();
 			app.main.top();
-			app.main.scrubVideo();
+			app.main.isVideoLoaded();
 			app.main.theaterMode();
 			app.main.initVideoModule();
 			app.main.contact();
