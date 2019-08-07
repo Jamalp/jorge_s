@@ -159,10 +159,11 @@ var app = app || {};
 			var duration = video.duration;
 			var width = video.offsetWidth;
 			var rect = video.getBoundingClientRect();
+			var frameTime = 1/23.976024
 			video.addEventListener('mousemove', function(e) {
 					e.preventDefault();
 					x = e.clientX - rect.left;
-					window.requestAnimationFrame(video_scrub);  
+					window.requestAnimationFrame(video_scrub);
 			});
 
 			function video_scrub() {
