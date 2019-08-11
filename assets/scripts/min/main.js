@@ -1,8 +1,14 @@
 var app = app || {};
 (function($){
 	app.main = {
+
+		isSafari: function() {
+			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			return isSafari;
+		},
+		
 		growLine : function() {
-			$(window).load(function() {
+			$(window).on('load', function() {
 				$('.grow-underline').addClass('grow');
 			});
 		},
@@ -16,6 +22,7 @@ var app = app || {};
 
 		initVideoModule : function() {
 			$('.js-video').on('click', function() {
+				console.log(32);
 				var vimeoID = $(this).attr('data-vimeoID');
 				if (vimeoID !== undefined || vimeoID !== '') {
 					app.main.createVideoHtml(vimeoID);
@@ -110,7 +117,7 @@ var app = app || {};
 				musicBtn.removeClass('active');
 				app.main.showCommercial();
 				$('.featured').removeClass('featured');
-				$('.stacked-work').addClass('sorted');
+				$('.works-grid').addClass('sorted');
 			});
 
 			musicBtn.on('click', function() {
@@ -118,7 +125,7 @@ var app = app || {};
 				commercialBtn.removeClass('active');
 				app.main.showMusic();
 				$('.featured').removeClass('featured');
-				$('.stacked-work').addClass('sorted');
+				$('.works-grid').addClass('sorted');
 			});
 		},
 
@@ -146,21 +153,56 @@ var app = app || {};
 			});
 		},
 
-		scrubVideo : function() {
-			var mouseX;
-			$('#homeVideo').mousemove( function(e) {
-						mouseX = e.pageX; 
-						var timV = $("#homeVideo").get(0).duration;
-						var valV = (timV*mouseX/$("#homeVideo").width());
-						console.log(valV);
-						$("#homeVideo").get(0).currentTime = valV - 22;
+		isVideoLoaded() {
+			if ($('#homeVideo').length) {
+				var isSafari = app.main.isSafari();
+				document.getElementById('homeVideo').addEventListener('loadeddata', function() {
+					if (isSafari) {
+					app.main.scrubVideo();
+				} else {
+					app.main.playVideoOnHover();
+				}
 			});
+		}
+		},
+
+		scrubVideo : function() {
+			var x = 0;
+			var video = document.getElementById('homeVideo');
+			var duration = video.duration;
+			var width = video.offsetWidth;
+			var rect = video.getBoundingClientRect();
+			var frameTime = 1/23.976024
+			video.addEventListener('mousemove', function(e) {
+					e.preventDefault();
+					x = e.clientX - rect.left;
+					window.requestAnimationFrame(video_scrub);
+			});
+
+			function video_scrub() {
+				var t = duration * x / width;
+				var value = Math.round(t * 100) / 100;
+				video.currentTime = value;
+			}
+		},
+
+		playVideoOnHover : function() {
+			var $video = $('#homeVideo');
+			var video = document.getElementById('homeVideo');
+			$video
+				.on('mouseenter', function () {
+					video.play();
+				})
+				.on('mouseleave', function() {
+					video.pause();
+				});
+
 		},
 
 		init : function() {
-			app.main.growLine();
+			// app.main.growLine();
 			app.main.top();
-			app.main.scrubVideo();
+			app.main.isVideoLoaded();
 			app.main.theaterMode();
 			app.main.initVideoModule();
 			app.main.contact();
