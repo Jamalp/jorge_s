@@ -1,8 +1,14 @@
 var app = app || {};
 (function($){
 	app.main = {
+
+		isSafari: function() {
+			var isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+			return isSafari;
+		},
+		
 		growLine : function() {
-			$(window).load(function() {
+			$(window).on('load', function() {
 				$('.grow-underline').addClass('grow');
 			});
 		},
@@ -110,7 +116,7 @@ var app = app || {};
 				musicBtn.removeClass('active');
 				app.main.showCommercial();
 				$('.featured').removeClass('featured');
-				$('.stacked-work').addClass('sorted');
+				$('.works-grid').addClass('sorted');
 			});
 
 			musicBtn.on('click', function() {
@@ -118,7 +124,7 @@ var app = app || {};
 				commercialBtn.removeClass('active');
 				app.main.showMusic();
 				$('.featured').removeClass('featured');
-				$('.stacked-work').addClass('sorted');
+				$('.works-grid').addClass('sorted');
 			});
 		},
 
@@ -147,10 +153,16 @@ var app = app || {};
 		},
 
 		isVideoLoaded() {
-			document.getElementById('homeVideo').addEventListener('loadeddata', function() {
-				console.log('video loaded');
-				app.main.scrubVideo();
+			if ($('#homeVideo').length) {
+				var isSafari = app.main.isSafari();
+				document.getElementById('homeVideo').addEventListener('loadeddata', function() {
+					if (isSafari) {
+					app.main.scrubVideo();
+				} else {
+					app.main.playVideoOnHover();
+				}
 			});
+		}
 		},
 
 		scrubVideo : function() {
@@ -173,21 +185,21 @@ var app = app || {};
 			}
 		},
 
-		// scrubVideo : function() {
-		// 	var mouseX;
-		// 	$('#homeVideo').mousemove( function moveFunc(e) {
-		// 			mouseX = e.pageX;
-		// 			var timV = $("#homeVideo").get(0).duration;
-		// 			var valV = (timV * mouseX/ $('#homeVideo').width());
-		// 			// reducing the precision of calculation
-		// 			valV = Math.round(valV * 100) / 100;
-		// 			console.log(valV);
-		// 			$("#homeVideo").get(0).currentTime = valV - 7;
-		// 	});
-		// },
+		playVideoOnHover : function() {
+			var $video = $('#homeVideo');
+			var video = document.getElementById('homeVideo');
+			$video
+				.on('mouseenter', function () {
+					video.play();
+				})
+				.on('mouseleave', function() {
+					video.pause();
+				});
+
+		},
 
 		init : function() {
-			app.main.growLine();
+			// app.main.growLine();
 			app.main.top();
 			app.main.isVideoLoaded();
 			app.main.theaterMode();
