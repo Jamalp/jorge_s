@@ -157,16 +157,14 @@ var app = app || {};
 			if ($('#homeVideo').length) {
 				var isSafari = app.main.isSafari();
 				if (isSafari) {
-				app.main.scrubVideo();
-				console.log(161);
-			} else {
-				app.main.playVideoOnHover();
-				console.log(163);
+					document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
+						app.main.scrubVideo();
+					});
+				} else {
+					app.main.playVideoOnHover();
+					console.log(163);
+				}
 			}
-			document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
-				
-			});
-		}
 		},
 
 		scrubVideo : function() {
