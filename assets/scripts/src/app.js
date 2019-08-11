@@ -156,14 +156,15 @@ var app = app || {};
 			console.log(1456);
 			if ($('#homeVideo').length) {
 				var isSafari = app.main.isSafari();
-				document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
-					if (isSafari) {
-					app.main.scrubVideo();
-					console.log(161);
-				} else {
-					app.main.playVideoOnHover();
-					console.log(163);
-				}
+				if (isSafari) {
+				app.main.scrubVideo();
+				console.log(161);
+			} else {
+				app.main.playVideoOnHover();
+				console.log(163);
+			}
+			document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
+				
 			});
 		}
 		},
