@@ -153,6 +153,7 @@ var app = app || {};
 		},
 
 		isVideoLoaded() {
+			console.log(1456);
 			if ($('#homeVideo').length) {
 				var isSafari = app.main.isSafari();
 				document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
