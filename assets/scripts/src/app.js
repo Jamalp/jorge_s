@@ -155,7 +155,7 @@ var app = app || {};
 		isVideoLoaded() {
 			if ($('#homeVideo').length) {
 				var isSafari = app.main.isSafari();
-				document.getElementById('homeVideo').addEventListener('loadeddata', function() {
+				document.getElementById('homeVideo').addEventListener('loadedmetadata', function() {
 					if (isSafari) {
 					app.main.scrubVideo();
 					console.log(161);
