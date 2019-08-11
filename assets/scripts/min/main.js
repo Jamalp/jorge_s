@@ -22,7 +22,6 @@ var app = app || {};
 
 		initVideoModule : function() {
 			$('.js-video').on('click', function() {
-				console.log(32);
 				var vimeoID = $(this).attr('data-vimeoID');
 				if (vimeoID !== undefined || vimeoID !== '') {
 					app.main.createVideoHtml(vimeoID);
@@ -159,8 +158,10 @@ var app = app || {};
 				document.getElementById('homeVideo').addEventListener('loadeddata', function() {
 					if (isSafari) {
 					app.main.scrubVideo();
+					console.log(161);
 				} else {
 					app.main.playVideoOnHover();
+					console.log(163);
 				}
 			});
 		}

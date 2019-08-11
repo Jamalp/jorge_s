@@ -158,8 +158,10 @@ var app = app || {};
 				document.getElementById('homeVideo').addEventListener('loadeddata', function() {
 					if (isSafari) {
 					app.main.scrubVideo();
+					console.log(161);
 				} else {
 					app.main.playVideoOnHover();
+					console.log(163);
 				}
 			});
 		}
