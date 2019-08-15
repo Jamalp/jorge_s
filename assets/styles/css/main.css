@@ -659,6 +659,11 @@ img {
 	color: #31353d;
 }
 
+.header .logo span:last-child {
+	font-size: 14px;
+	font-size: .875rem;
+}
+
 .header .logo-container {
 	width: 20%;
 }
@@ -907,10 +912,6 @@ img {
 
 .video-wrapper .video-player .close:hover {
 	transform: rotate(90deg);
-}
-
-#work {
-	padding-top: 40px;
 }
 
 .work-hero {

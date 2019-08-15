@@ -42,6 +42,9 @@
 		display:inline-block;
 		color:$black;
 		white-space: nowrap;
+		span:last-child {
+			@include font-size(14px);
+		}
 	}
 	.logo-container {
 		width:20%;
