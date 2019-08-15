@@ -32,8 +32,6 @@ gulp.task('sass',function(){
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(cleanCss())
-        .pipe(sourcemaps.write())
         .pipe(gulp.dest('assets/styles/css'))
         .pipe(reload({stream:true}))
         .pipe(notify('css task finished'))
