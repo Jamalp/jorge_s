@@ -45,13 +45,13 @@
 .works-grid {
 	display:flex;
 	flex-wrap:wrap;
-	margin: 0 -7px;
+	margin: 0 -10px;
 	padding: 0 4%;
 	animation:fadeInFromNone 2.5s ease;
 
 	&.sorted {
 		.thumbnail,.thumbnail.wide,.thumbnail.square {
-			width: calc(33.33% - 15px);
+			width: calc(33.33% - 10px);
 
 			@include mobile {
 				width: 100%;
@@ -60,8 +60,8 @@
 	}
 
 	.thumbnail {
-		height: 18vw;
-		margin:0 7px 15px;
+		height: 22vw;
+		margin:0 5px 10px;
 		cursor:pointer;
 		overflow:hidden;
 		transition: all 1s ease;
@@ -91,13 +91,13 @@
 			animation:fadeInFromNoneUp .5s ease;
 		}
 		&.wide {
-			width: calc(60% - 15px);
+			width: calc(60% - 10px);
 			@include mobile {
 				width: 100%;
 			}
 		}
 		&.square {
-			width: calc(40% - 15px);
+			width: calc(40% - 10px);
 			@include mobile {
 				width: 100%;
 			}
