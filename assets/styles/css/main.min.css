@@ -638,6 +638,17 @@ img {
 	padding-right: 0;
 }
 
+#about .about-copy p a {
+	font-family: inherit;
+	font-size: inherit;
+	font-weight: inherit;
+	color: inherit;
+}
+
+#about .about-copy p a:hover {
+	text-decoration: underline;
+}
+
 .header {
 	background-color: white;
 }
@@ -961,7 +972,7 @@ img {
 
 .works-grid {
 	display: flex;
-	margin: 0 -5px;
+	margin: 0 -10px;
 	padding: 0 4%;
 	-webkit-animation: fadeInFromNone 2.5s ease;
 	animation: fadeInFromNone 2.5s ease;

@@ -59,6 +59,18 @@
 			&:nth-child(even) {
 				padding-right:0;
 			}
+
+			a {
+				
+				font-size: inherit;
+				font-family: inherit;
+				font-weight: inherit;
+				color: inherit;
+
+				&:hover {
+					text-decoration: underline;
+				}
+			}
 		}
 	}
 }
